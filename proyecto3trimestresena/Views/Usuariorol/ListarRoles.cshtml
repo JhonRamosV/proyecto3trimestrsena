@@ -1,0 +1,10 @@
+﻿@model IEnumerable<proyecto3trimestresena.Models.roles>
+
+<select class="form-control" id="id_rol" name="id_rol">
+    @foreach (var item in Model)
+    {
+        <option value="@item.id">@item.descripcion</option>
+    }
+
+
+</select>

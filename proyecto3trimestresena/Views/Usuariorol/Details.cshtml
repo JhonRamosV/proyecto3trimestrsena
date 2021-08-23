@@ -1,0 +1,38 @@
+﻿@model proyecto3trimestresena.Models.usuariorol
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>usuariorol</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idUsuario)
+            @proyecto3trimestresena.Controllers.UsuariorolController.NombreUsuario(Model.idUsuario)
+
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idRol)
+            @proyecto3trimestresena.Controllers.UsuariorolController.DescripcionRol(Model.idRol)
+
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idRol)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
