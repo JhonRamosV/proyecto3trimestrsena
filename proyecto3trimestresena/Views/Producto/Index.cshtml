@@ -7,21 +7,21 @@
 <h2>Producto</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear Nuevo", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.nombre)
+            Nombre
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.percio_unitario)
+            Precio Unitario
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.descripcion)
+            Descripcion
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.cantidad)
+            Cantidad
         </th>
         <th>
             Proveedor
@@ -47,9 +47,9 @@
             @proyecto3trimestresena.Controllers.ProductoController.NombreProveedor(item.id_proveedor)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id }, new {@class = "linkDelete" })
+            @Html.ActionLink("Editar", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.id }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.id }, new {@class = "linkDelete" })
         </td>
     </tr>
 }
