@@ -1,0 +1,10 @@
+﻿@model IEnumerable<proyecto3trimestresena.Models.compra>
+
+<select class="form-control" id="id_compra" name="id_compra">
+    @foreach (var item in Model)
+    {
+        <option value="@item.id">@item.fecha</option>
+    }
+
+
+</select>
