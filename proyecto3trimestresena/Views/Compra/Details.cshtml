@@ -1,0 +1,50 @@
+﻿@model proyecto3trimestresena.Models.compra
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>compra</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.total)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.usuario)
+        </dt>
+
+        <dd>
+            @proyecto3trimestresena.Controllers.CompraController.NombreUsuario(Model.id_usuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cliente)
+        </dt>
+
+        <dd>
+            @proyecto3trimestresena.Controllers.CompraController.NombreCliente(Model.id_cliente)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
