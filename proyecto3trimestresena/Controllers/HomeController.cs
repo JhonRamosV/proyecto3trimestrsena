@@ -6,8 +6,11 @@ using System.Web.Mvc;
 
 namespace proyecto3trimestresena.Controllers
 {
+    
     public class HomeController : Controller
     {
+        
+
         public ActionResult Index()
         {
             return View();

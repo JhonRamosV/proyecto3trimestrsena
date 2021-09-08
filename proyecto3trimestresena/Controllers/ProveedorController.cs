@@ -6,8 +6,10 @@ using System.Web.Mvc;
 using proyecto3trimestresena.Models;
 namespace proyecto3trimestresena.Controllers
 {
+    
     public class ProveedorController : Controller
     {
+        [Authorize]
         // GET: Proveedor
         public ActionResult Index()
         {

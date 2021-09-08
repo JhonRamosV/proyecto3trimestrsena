@@ -46,6 +46,10 @@
 
                         </ul>
                     </li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("cerrar Sesion","CloseSession","Usuario")</li>
+                    }
                 </ul>
             </div>
         </div>

@@ -9,6 +9,7 @@ namespace proyecto3trimestresena.Controllers
 {
     public class Producto_compraController : Controller
     {
+        [Authorize]
         // GET: Producto_compra
         public ActionResult Index()
         {

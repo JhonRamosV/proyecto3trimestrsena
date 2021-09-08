@@ -282,6 +282,7 @@
     <Content Include="Views\Producto_imagen\Create.cshtml" />
     <Content Include="Views\Producto_imagen\Details.cshtml" />
     <Content Include="Views\Producto_imagen\Edit.cshtml" />
+    <Content Include="Views\Usuario\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

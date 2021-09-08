@@ -9,6 +9,7 @@ namespace proyecto3trimestresena.Controllers
 {
     public class ClienteController : Controller
     {
+        [Authorize]
         // GET: Cliente
         public ActionResult Index()
         {
