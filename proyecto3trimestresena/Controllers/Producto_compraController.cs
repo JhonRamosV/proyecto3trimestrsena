@@ -9,7 +9,7 @@ namespace proyecto3trimestresena.Controllers
 {
     public class Producto_compraController : Controller
     {
-        [Authorize]
+        
         // GET: Producto_compra
         public ActionResult Index()
         {
@@ -155,6 +155,37 @@ namespace proyecto3trimestresena.Controllers
                 ModelState.AddModelError("", "error" + ex);
                 return View();
 
+            }
+
+
+            
+        }
+
+        public ActionResult Constancia()
+        {
+            try
+            {
+
+                var db = new inventario2021Entities();
+                var query = from tabCompra in db.compra
+                            join tabProducto_compra in db.producto_compra on tabCompra.id equals tabProducto_compra.id_compra
+                            select new Constancia
+                            {
+                                fechaCompra = tabCompra.fecha,
+                                totalCompra = tabCompra.total,
+                                productoProducto_compra = tabProducto_compra.id_producto,
+                                cantidadProducto_compra = tabProducto_compra.cantidad,
+
+
+                            };
+                return View(query);
+
+
+            }
+            catch(Exception ex)
+            {
+                ModelState.AddModelError("", "error" + ex);
+                return View();
             }
         }
 

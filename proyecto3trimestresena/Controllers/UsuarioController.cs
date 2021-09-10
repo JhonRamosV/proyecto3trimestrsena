@@ -185,6 +185,7 @@ namespace proyecto3trimestresena.Controllers
                 return View();
             }
         }
+
         [Authorize]
         public ActionResult CloseSession()
         {
