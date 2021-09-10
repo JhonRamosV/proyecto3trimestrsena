@@ -12,5 +12,7 @@ namespace proyecto3trimestresena.Models
         public int totalCompra { get; set; }
         public int productoProducto_compra { get; set; }
         public int cantidadProducto_compra { get; set; }
-    }
+        public string nombreProducto { get; set; }
+    } 
+
 }

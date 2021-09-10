@@ -14,8 +14,9 @@
     <tr>
         <th>Fecha Compra</th>
         <th>Total Compra</th>
-        <th> Producto </th>
-        <th> Cantidad</th>
+        <th>Nombre del producto</th>
+        <th>Codigo Producto </th>
+        <th>Cantidad</th>
     </tr>
 
     @foreach(var item in Model)
@@ -23,8 +24,10 @@
     <tr>
         <td>@Html.DisplayFor(modelItem => item.fechaCompra)</td>
         <td>@Html.DisplayFor(modelItem => item.totalCompra)</td>
+        <td>@Html.DisplayFor(modelItem => item.nombreProducto)</td>
         <td>@Html.DisplayFor(modelItem => item.productoProducto_compra)</td>
         <td>@Html.DisplayFor(modelItem => item.cantidadProducto_compra)</td>
+
 
 
 
@@ -33,3 +36,6 @@
     }
 
 </table>
+
+
+@Html.ActionLink("Imprimir constancia", "PdfConstancia");

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using proyecto3trimestresena.Models;
+using Rotativa;
 
 namespace proyecto3trimestresena.Controllers
 {
@@ -168,16 +169,24 @@ namespace proyecto3trimestresena.Controllers
 
                 var db = new inventario2021Entities();
                 var query = from tabCompra in db.compra
+                            //from tapProducto in db.producto
+
+
                             join tabProducto_compra in db.producto_compra on tabCompra.id equals tabProducto_compra.id_compra
+
                             select new Constancia
                             {
                                 fechaCompra = tabCompra.fecha,
                                 totalCompra = tabCompra.total,
                                 productoProducto_compra = tabProducto_compra.id_producto,
                                 cantidadProducto_compra = tabProducto_compra.cantidad,
+                              // nombreProducto = tapProducto.nombre,
+                                
 
 
                             };
+                
+                
                 return View(query);
 
 
@@ -187,6 +196,12 @@ namespace proyecto3trimestresena.Controllers
                 ModelState.AddModelError("", "error" + ex);
                 return View();
             }
+        }
+
+
+        public ActionResult PdfConstancia()
+        {
+            return new ActionAsPdf("Constancia") { FileName = "constancia.pdf" };
         }
 
     }
