@@ -11,6 +11,7 @@ namespace proyecto3trimestresena.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class compra
     {
@@ -21,9 +22,13 @@ namespace proyecto3trimestresena.Models
         }
     
         public int id { get; set; }
+        [Required(ErrorMessage = "por favor llene todos los datos")]
         public System.DateTime fecha { get; set; }
+        [Required(ErrorMessage = "por favor llene todos los datos")]
         public int total { get; set; }
+        [Required(ErrorMessage = "por favor llene todos los datos")]
         public int id_usuario { get; set; }
+        [Required(ErrorMessage = "por favor llene todos los datos")]
         public int id_cliente { get; set; }
     
         public virtual cliente cliente { get; set; }

@@ -11,11 +11,14 @@ namespace proyecto3trimestresena.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class usuariorol
     {
         public int id { get; set; }
+        [Required(ErrorMessage = "por favor llene todos los datos")]
         public int idUsuario { get; set; }
+        [Required(ErrorMessage = "por favor llene todos los datos")]
         public int idRol { get; set; }
     
         public virtual roles roles { get; set; }

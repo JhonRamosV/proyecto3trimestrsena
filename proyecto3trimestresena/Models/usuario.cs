@@ -11,6 +11,7 @@ namespace proyecto3trimestresena.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class usuario
     {
@@ -22,10 +23,22 @@ namespace proyecto3trimestresena.Models
         }
     
         public int id { get; set; }
+
+        [Required (ErrorMessage = "por favor llene todos los datos")]
+
         public string nombre { get; set; }
+
+        [Required(ErrorMessage = "por favor llene todos los datos")]
+
         public string apellido { get; set; }
+
+        [Required(ErrorMessage = "por favor llene todos los datos")]
         public System.DateTime fecha_nacimiento { get; set; }
+
+        [Required(ErrorMessage = "por favor llene todos los datos")]
         public string email { get; set; }
+
+        [Required(ErrorMessage = "por favor llene todos los datos")]
         public string password { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
