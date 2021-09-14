@@ -8,10 +8,10 @@ using System.Web.Security;
 using System.Text;
 namespace proyecto3trimestresena.Controllers
 {
-    
+
     public class UsuarioController : Controller
     {
-       
+        [Authorize]
         // GET: Usuario
         public ActionResult Index()
         {
@@ -155,8 +155,6 @@ namespace proyecto3trimestresena.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-
-
         public ActionResult Login(string user, string password)
         {
             try

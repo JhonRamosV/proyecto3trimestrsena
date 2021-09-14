@@ -169,10 +169,10 @@ namespace proyecto3trimestresena.Controllers
 
                 var db = new inventario2021Entities();
                 var query = from tabCompra in db.compra
-                            //from tapProducto in db.producto
+                            from tapProducto in db.producto
 
 
-                            join tabProducto_compra in db.producto_compra on tabCompra.id equals tabProducto_compra.id_compra
+                            join tabProducto_compra in db.producto_compra  on tabCompra.id equals tabProducto_compra.id_compra
 
                             select new Constancia
                             {
@@ -180,7 +180,7 @@ namespace proyecto3trimestresena.Controllers
                                 totalCompra = tabCompra.total,
                                 productoProducto_compra = tabProducto_compra.id_producto,
                                 cantidadProducto_compra = tabProducto_compra.cantidad,
-                              // nombreProducto = tapProducto.nombre,
+                                nombreProducto = tapProducto.nombre,
                                 
 
 
