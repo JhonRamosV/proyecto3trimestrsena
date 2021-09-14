@@ -24,7 +24,7 @@ namespace proyecto3trimestresena.Models
     
         public int id { get; set; }
 
-        [Required (ErrorMessage = "por favor llene todos los datos")]
+        [Required (ErrorMessage = "por favor llenen todos los datos")]
 
         public string nombre { get; set; }
 
