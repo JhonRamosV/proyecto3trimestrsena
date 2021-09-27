@@ -294,6 +294,8 @@
     <Content Include="Views\Usuario\Login.cshtml" />
     <Content Include="Views\Shared\Plantilla.cshtml" />
     <Content Include="Views\Producto_compra\Constancia.cshtml" />
+    <Content Include="Views\Proveedor\uploadCSV.cshtml" />
+    <Content Include="Views\Cliente\uploadCSV.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
