@@ -233,6 +233,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Uploads\Imagenes\28A.jpg" />
+    <Content Include="Uploads\Imagenes\Pared.jpg" />
+    <Content Include="Uploads\Imagenes\portatil.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -296,6 +299,8 @@
     <Content Include="Views\Producto_compra\Constancia.cshtml" />
     <Content Include="Views\Proveedor\uploadCSV.cshtml" />
     <Content Include="Views\Cliente\uploadCSV.cshtml" />
+    <Content Include="Views\Producto_imagen\Cargarimagen.cshtml" />
+    <Content Include="Uploads\datos.csv" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
