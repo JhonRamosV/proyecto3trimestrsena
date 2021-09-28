@@ -10,7 +10,7 @@ namespace proyecto3trimestresena.Controllers
 {
     public class Producto_imagenController : Controller
     {
-
+        [Authorize]
         // GET: Producto_imagen
         public ActionResult Index()
         {
@@ -35,6 +35,7 @@ namespace proyecto3trimestresena.Controllers
             using (var db = new inventario2021Entities())
             {
                 return PartialView(db.producto.ToList());
+                
             }
         }
 

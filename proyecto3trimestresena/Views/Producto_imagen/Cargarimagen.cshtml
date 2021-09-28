@@ -1,14 +1,22 @@
-﻿<h2>Cargar Imagen Producto</h2>
+﻿
+@model IEnumerable<proyecto3trimestresena.Models.producto_imagen>
+<h2>Cargar Imagen Producto</h2>
 
 @using (Html.BeginForm("Cargarimagen", "Producto_imagen", FormMethod.Post, new { enctype = "multipart/form-data" }))
+
 {
+
+
     @Html.AntiForgeryToken()
-    <div class="form-group">
-        <label class="control-label col-md-2">Producto</label>
-        <div class="col-md-10">
-            <input type="number" name="producto" class="form-control" />
-        </div>
+<div class="form-group">
+    <label class="control-label col-md-2">Producto</label>
+    @*<label class="control-label col-md-2" for="id_Producto">Producto</label>*@
+    <div class="col-md-10">
+        @*@Html.Action("ListarProductoo")*@
+        <input type="number" name="producto" class="form-control" />*
+
     </div>
+</div>
 
     <div class="form-group">
         <label class="control-label col-md-2">imagen</label>
@@ -24,3 +32,4 @@
     </div>
 
 }
+

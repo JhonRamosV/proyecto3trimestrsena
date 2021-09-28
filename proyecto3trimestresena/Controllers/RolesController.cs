@@ -9,7 +9,7 @@ namespace proyecto3trimestresena.Controllers
     
     public class RolesController : Controller
     {
-        
+        [Authorize]
         // GET: Roles
         public ActionResult Index()
         {
